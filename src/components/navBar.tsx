@@ -1,18 +1,21 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-
+import { useState } from "react";
 import royalHeartHoseLogo from "@/public/royalHeartHouseLogo.webp";
 
 type Lang = "en" | "zh";
 
-export default function NavBar() {
-  const [lang, setLang] = useState<Lang>("en");
+type NavBarProps = {
+  lang: Lang;
+  setLang: (lang: Lang) => void;
+};
+
+export default function NavBar({ lang, setLang }: NavBarProps) {
   const [cartCount] = useState(0);
 
   return (
-    <div className="border-royalheart-cream z-50 flex h-16 items-center justify-between border-b bg-white px-4 shadow-sm sm:h-20 sm:px-6">
+    <div className="z-50 flex h-16 items-center justify-between border-b border-gray-400 bg-white px-4 shadow-sm sm:h-20 sm:px-6">
       <a href="/" className="flex items-center gap-2 sm:gap-3">
         <Image
           className="h-9 w-9 rounded-lg shadow-sm sm:h-11 sm:w-11 md:h-13 md:w-13"
@@ -20,7 +23,7 @@ export default function NavBar() {
           alt="Royal Heart House Logo"
         />
         <div className="flex flex-col leading-tight">
-          <p className="text-royalheart-darkbrown font-serif text-xs italic sm:text-sm md:text-lg">
+          <p className="font-serif text-xs text-black italic sm:text-sm md:text-lg">
             Royal Heart House
           </p>
           <p className="text-royalheart-gold text-xs font-bold sm:text-sm md:text-base">
@@ -48,7 +51,7 @@ export default function NavBar() {
 
         <button className="bg-royalheart-gold hover:bg-royalheart-brown flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-bold text-white shadow-md transition-all duration-150 hover:scale-105 active:scale-95 sm:gap-2 sm:px-4 sm:py-2 sm:text-sm">
           🛒
-          <p className="xs:inline hidden sm:inline">
+          <p className="hidden sm:inline">
             {lang === "en" ? "Cart" : "购物车"}
           </p>
           {cartCount > 0 && (
