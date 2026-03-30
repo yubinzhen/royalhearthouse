@@ -239,8 +239,7 @@ export const PRODUCTS: Product[] = [
     image: "product/cupcake/cupcake1.jpg",
     name_en: "Vanilla Cupcakes",
     name_zh: "椰子流沙泡芙",
-    desc_en:
-      "Vanilla cupcakes topped with oreos, grapes, and sprinkles.",
+    desc_en: "Vanilla cupcakes topped with oreos, grapes, and sprinkles.",
     desc_zh: "酥脆烤泡芙，流沙或椰奶馅，共30个。",
     sizes: [{ id: "1 dozen", label_en: "1 dozen", label_zh: "1打", price: 12 }],
   },
@@ -250,8 +249,7 @@ export const PRODUCTS: Product[] = [
     image: "product/cupcake/cupcake2.webp",
     name_en: "Confetti/Oreo Cupcakes",
     name_zh: "椰子流沙泡芙",
-    desc_en:
-      "Vanilla cupcakes topped with oreos, strawberry, and sprinkles.",
+    desc_en: "Vanilla cupcakes topped with oreos, strawberry, and sprinkles.",
     desc_zh: "酥脆烤泡芙，流沙或椰奶馅，共30个。",
     sizes: [{ id: "1 dozen", label_en: "1 dozen", label_zh: "1打", price: 12 }],
   },
@@ -261,8 +259,7 @@ export const PRODUCTS: Product[] = [
     image: "product/cupcake/cupcake3.jpg",
     name_en: "Plain Vanilla Cupcakes",
     name_zh: "椰子流沙泡芙",
-    desc_en:
-      "Vanilla cupcakes with no frosting.",
+    desc_en: "Vanilla cupcakes with no frosting.",
     desc_zh: "酥脆烤泡芙，流沙或椰奶馅，共30个。",
     sizes: [{ id: "1 dozen", label_en: "1 dozen", label_zh: "1打", price: 12 }],
   },
