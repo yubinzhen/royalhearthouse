@@ -12,7 +12,7 @@ export interface Size {
 export interface Product {
   id: number;
   category: string;
-  image: string; // e.g. "/images/thomas-cake.jpg"
+  image: string;
   name_en: string;
   name_zh: string;
   desc_en: string;
@@ -47,15 +47,13 @@ export default function ProductCard({
 
   return (
     <div className="hover:border-blush relative flex flex-col overflow-hidden rounded-2xl border border-transparent bg-white shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
-      {/* Badge */}
       {product.badge_en && (
         <div className="bg-royalheart-gold absolute top-2.5 right-2.5 z-10 rounded-full px-2.5 py-0.5 text-[0.65rem] font-black tracking-wide text-white shadow">
           {t(product.badge_en, product.badge_zh ?? "")}
         </div>
       )}
 
-      {/* Image */}
-      <div className="bg-blush-light h-64 w-full">
+      <div className="bg-royalheart-lightblush h-64 w-full">
         <img
           src={product.image}
           alt={t(product.name_en, product.name_zh)}
@@ -63,11 +61,10 @@ export default function ProductCard({
         />
       </div>
 
-      {/* Body */}
       <div className="flex flex-1 flex-col p-4">
-        <h3 className="text-text font-serif text-base leading-snug">
+        <div className="text-text font-serif text-base">
           {t(product.name_en, product.name_zh)}
-        </h3>
+        </div>
         <p className="text-text-light mb-2 text-[0.72rem]">
           {t(product.name_zh, product.name_en)}
         </p>
@@ -75,14 +72,12 @@ export default function ProductCard({
           {t(product.desc_en, product.desc_zh)}
         </p>
 
-        {/* Footer row */}
         <div className="flex items-center justify-between gap-2">
-          {/* Size selector or flat price */}
           {product.sizes.length > 1 ? (
             <select
               value={selectedSizeIdx}
               onChange={(e) => setSelectedSizeIdx(Number(e.target.value))}
-              className="bg-royalheart-cream text-royalheart-gold border-royalheart-blush text-text-mid bg-cream focus:border-gold max-w-[130px] rounded-lg border px-2 py-1.5 text-[0.75rem] font-bold focus:outline-none"
+              className="bg-royalheart-cream text-royalheart-gold border-royalheart-blush text-text-mid focus:border-gold max-w-[130px] rounded-lg border px-2 py-1.5 text-[0.75rem] font-bold focus:outline-none"
             >
               {product.sizes.map((s, i) => (
                 <option key={s.id} value={i}>
@@ -91,20 +86,19 @@ export default function ProductCard({
               ))}
             </select>
           ) : (
-            <span className="text-royalheart-gold text-base font-semibold">
+            <div className="text-royalheart-gold text-base font-semibold">
               ${size.price}
-            </span>
+            </div>
           )}
 
-          {/* Add button */}
           <button
             onClick={handleAdd}
             className={`bg-royalheart-brown hover:bg-royalheart-lightgold flex items-center gap-1.5 rounded-full px-4 py-2 text-[0.8rem] font-bold text-white transition-all duration-150 active:scale-95 ${
-              popped ? "bg-gold scale-110" : ""
+              popped ? "scale-110" : ""
             }`}
           >
-            <span className="text-base leading-none">+</span>
-            <span>{t("Add", "加入")}</span>
+            <div className="text-base leading-none">+</div>
+            <div>{t("Add", "加入")}</div>
           </button>
         </div>
       </div>

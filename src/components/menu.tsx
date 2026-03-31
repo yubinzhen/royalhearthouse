@@ -21,18 +21,16 @@ export default function MenuGrid({ lang, onAdd }: MenuGridProps) {
       : PRODUCTS.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="menu" className="mx-auto mb-8 max-w-6xl px-15 py-12">
-      {/* Section heading */}
+    <div id="menu" className="mx-auto mb-8 max-w-6xl px-15 py-12">
       <div className="mb-6">
-        <p className="text-gold mb-1 text-xs font-black tracking-[0.2em] uppercase">
+        <p className="text-royalheart-gold mb-1 text-xs font-black tracking-[0.2em] uppercase">
           {t("Our Menu", "我们的菜单")}
         </p>
-        <h2 className="text-brown font-serif text-3xl">
+        <div className="text-royalheart-brown font-serif text-3xl">
           {t("Fresh & Made to Order", "新鲜现做")}
-        </h2>
+        </div>
       </div>
 
-      {/* Category tabs */}
       <div className="scrollbar-hide mb-8 flex gap-2 overflow-x-auto pb-2">
         {CATEGORIES.map((cat) => (
           <button
@@ -49,7 +47,6 @@ export default function MenuGrid({ lang, onAdd }: MenuGridProps) {
         ))}
       </div>
 
-      {/* Product grid */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {filtered.map((product) => (
           <ProductCard
@@ -66,6 +63,6 @@ export default function MenuGrid({ lang, onAdd }: MenuGridProps) {
           {t("No items in this category.", "此分类暂无商品。")}
         </p>
       )}
-    </section>
+    </div>
   );
 }
