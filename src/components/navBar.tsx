@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import royalHeartHoseLogo from "@/public/royalHeartHouseLogo.webp";
 
 type Lang = "en" | "zh";
@@ -9,11 +8,11 @@ type Lang = "en" | "zh";
 type NavBarProps = {
   lang: Lang;
   setLang: (lang: Lang) => void;
+  cartCount: number;
+  onCartClick: () => void;
 };
 
-export default function NavBar({ lang, setLang }: NavBarProps) {
-  const [cartCount] = useState(0);
-
+export default function NavBar({ lang, setLang, cartCount, onCartClick }: NavBarProps) {
   return (
     <div className="z-50 flex h-16 items-center justify-between border-b border-gray-400 bg-white px-4 shadow-sm sm:h-20 sm:px-6">
       <a href="/" className="flex items-center gap-2 sm:gap-3">
@@ -49,7 +48,11 @@ export default function NavBar({ lang, setLang }: NavBarProps) {
           ))}
         </div>
 
-        <button className="bg-royalheart-gold hover:bg-royalheart-brown flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-bold text-white shadow-md transition-all duration-150 hover:scale-105 active:scale-95 sm:gap-2 sm:px-4 sm:py-2 sm:text-sm">
+        <button
+          type="button"
+          onClick={onCartClick}
+          className="bg-royalheart-gold hover:bg-royalheart-brown flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-bold text-white shadow-md transition-all duration-150 hover:scale-105 active:scale-95 sm:gap-2 sm:px-4 sm:py-2 sm:text-sm"
+        >
           🛒
           <p className="hidden sm:inline">
             {lang === "en" ? "Cart" : "购物车"}

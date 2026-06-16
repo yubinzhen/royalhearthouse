@@ -19,14 +19,6 @@ Royal Heart House runs on Node.js Version 20.10.0 and higher. Please ensure you 
 
 This project is built using [Next.js](https://nextjs.org), a React framework. Next.js is automatically installed when you install all dependencies for this project.
 
-## Environment Variables
-
-The following environment variables are required and must be stored in an `.env` file:
-
-```env
-N/A
-```
-
 ## Commands
 
 ### Dependencies
