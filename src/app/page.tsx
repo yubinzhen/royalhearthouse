@@ -50,13 +50,17 @@ const Home = () => {
   }, []);
 
   const subtotal = useMemo(
-    () => cartItems.reduce((total, item) => total + item.size.price * item.quantity, 0),
-    [cartItems]
+    () =>
+      cartItems.reduce(
+        (total, item) => total + item.size.price * item.quantity,
+        0,
+      ),
+    [cartItems],
   );
 
   const cartItemCount = useMemo(
     () => cartItems.reduce((count, item) => count + item.quantity, 0),
-    [cartItems]
+    [cartItems],
   );
 
   const handleAdd = (product: Product, size: Size) => {
@@ -65,7 +69,9 @@ const Home = () => {
       const existing = current.find((item) => item.key === itemKey);
       if (existing) {
         return current.map((item) =>
-          item.key === itemKey ? { ...item, quantity: item.quantity + 1 } : item
+          item.key === itemKey
+            ? { ...item, quantity: item.quantity + 1 }
+            : item,
         );
       }
       return [...current, { key: itemKey, product, size, quantity: 1 }];
@@ -75,8 +81,12 @@ const Home = () => {
   const handleItemQtyChange = (key: string, quantity: number) => {
     setCartItems((current) =>
       current
-        .map((item) => (item.key === key ? { ...item, quantity: Math.max(1, quantity) } : item))
-        .filter((item) => item.quantity > 0)
+        .map((item) =>
+          item.key === key
+            ? { ...item, quantity: Math.max(1, quantity) }
+            : item,
+        )
+        .filter((item) => item.quantity > 0),
     );
   };
 
@@ -94,8 +104,15 @@ const Home = () => {
       return;
     }
 
-    if (!pickupInfo.name || !pickupInfo.phone || !pickupInfo.pickupDate || !pickupInfo.pickupTime) {
-      setCheckoutError("Please fill in your pickup name, phone, date, and time.");
+    if (
+      !pickupInfo.name ||
+      !pickupInfo.phone ||
+      !pickupInfo.pickupDate ||
+      !pickupInfo.pickupTime
+    ) {
+      setCheckoutError(
+        "Please fill in your pickup name, phone, date, and time.",
+      );
       return;
     }
 

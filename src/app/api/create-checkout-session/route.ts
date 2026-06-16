@@ -6,7 +6,7 @@ export async function POST(request: Request) {
   if (!stripeSecretKey) {
     return NextResponse.json(
       { error: "Missing STRIPE_SECRET_KEY in environment variables." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 
@@ -35,14 +35,19 @@ export async function POST(request: Request) {
   if (!Array.isArray(cartItems) || cartItems.length === 0) {
     return NextResponse.json(
       { error: "Cart is empty. Add items before checking out." },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
-  if (!pickupInfo?.name || !pickupInfo?.phone || !pickupInfo?.pickupDate || !pickupInfo?.pickupTime) {
+  if (
+    !pickupInfo?.name ||
+    !pickupInfo?.phone ||
+    !pickupInfo?.pickupDate ||
+    !pickupInfo?.pickupTime
+  ) {
     return NextResponse.json(
       { error: "Pickup name, phone, date, and time are required." },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -80,7 +85,7 @@ export async function POST(request: Request) {
   if (!session.url) {
     return NextResponse.json(
       { error: "Could not create checkout session." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 

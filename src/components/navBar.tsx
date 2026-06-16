@@ -12,7 +12,12 @@ type NavBarProps = {
   onCartClick: () => void;
 };
 
-export default function NavBar({ lang, setLang, cartCount, onCartClick }: NavBarProps) {
+export default function NavBar({
+  lang,
+  setLang,
+  cartCount,
+  onCartClick,
+}: NavBarProps) {
   return (
     <div className="z-50 flex h-16 items-center justify-between border-b border-gray-400 bg-white px-4 shadow-sm sm:h-20 sm:px-6">
       <a href="/" className="flex items-center gap-2 sm:gap-3">
