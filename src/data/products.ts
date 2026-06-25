@@ -17,7 +17,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 1,
     category: "birthday",
-    image: "product/cake/cake1.jpg",
+    image: "product/cake/cake1.webp",
     name_en: "Mango Bomb",
     name_zh: "芒果爆浆蛋糕",
     desc_en: "Three layered mango and blueberry cake.",
@@ -30,7 +30,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 2,
     category: "birthday",
-    image: "product/cake/cake2.jpg",
+    image: "product/cake/cake2.webp",
     name_en: "Fruit Confectionery",
     name_zh: "缤纷水果蛋糕",
     desc_en:
@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 3,
     category: "birthday",
-    image: "product/cake/cake3.jpg",
+    image: "product/cake/cake3.webp",
     name_en: "Half & Half",
     name_zh: "双拼水果蛋糕",
     desc_en:
@@ -57,7 +57,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 4,
     category: "birthday",
-    image: "product/cake/cake7.jpg",
+    image: "product/cake/cake7.webp",
     name_en: "Princess Belle's Cake",
     name_zh: "贝儿公主蛋糕",
     desc_en: "Fresh mango cake topped with decor and Princess Belle figurine.",
@@ -70,7 +70,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 5,
     category: "birthday",
-    image: "product/cake/cake5.jpg",
+    image: "product/cake/cake5.webp",
     name_en: "Princess Elsa's Cake",
     name_zh: "艾莎公主蛋糕",
     desc_en:
@@ -84,7 +84,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 6,
     category: "birthday",
-    image: "product/cake/cake6.jpg",
+    image: "product/cake/cake6.webp",
     name_en: "Thomas the Train Cake",
     name_zh: "托马斯小火车蛋糕",
     desc_en:
@@ -97,7 +97,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 7,
     category: "birthday",
-    image: "product/cake/cake10.jpg",
+    image: "product/cake/cake10.webp",
     name_en: "Strawberry Bomb",
     name_zh: "草莓爆浆蛋糕",
     desc_en: "Three layered strawberry cake.",
@@ -110,7 +110,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 8,
     category: "birthday",
-    image: "product/cake/cake8.jpg",
+    image: "product/cake/cake8.webp",
     name_en: "Pearl Cake",
     name_zh: "珍珠装饰蛋糕",
     desc_en: "Strawberry and mango mix cake with pearl decor.",
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 9,
     category: "birthday",
-    image: "product/cake/cake9.jpg",
+    image: "product/cake/cake9.webp",
     name_en: "Triple Trouble",
     name_zh: "三重奏水果蛋糕",
     desc_en: "Blueberry/strawberry/mango cake with colorful pearl decor.",
@@ -136,7 +136,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 10,
     category: "birthday",
-    image: "product/cake/cake14.jpg",
+    image: "product/cake/cake14.webp",
     name_en: "Royalty Cake",
     name_zh: "皇冠蛋糕",
     desc_en: "Gorgeous layered strawberry cake topped with crown decor.",
@@ -150,7 +150,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 11,
     category: "birthday",
-    image: "product/cake/cake11.jpg",
+    image: "product/cake/cake11.webp",
     name_en: "Coco Double Trouble",
     name_zh: "可可双拼蛋糕",
     desc_en: "Mango/strawberry cake with chocolate drizzle on the side.",
@@ -163,7 +163,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 12,
     category: "birthday",
-    image: "product/cake/cake12.jpg",
+    image: "product/cake/cake12.webp",
     name_en: "Pearl Princess Cake",
     name_zh: "珍珠公主蛋糕",
     desc_en: "Strawberry cake topped with pearl crown.",
@@ -176,7 +176,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 13,
     category: "birthday",
-    image: "product/cake/cake13.jpg",
+    image: "product/cake/cake13.webp",
     name_en: "Hello Kitty Cake",
     name_zh: "Hello Kitty 蛋糕",
     desc_en: "Strawberry cake topped with marshmallow and Hello Kitty decor.",
@@ -189,7 +189,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 14,
     category: "birthday",
-    image: "product/cake/cake4.jpg",
+    image: "product/cake/cake4.webp",
     name_en: "Four Row Fruit Cake",
     name_zh: "四拼水果蛋糕",
     desc_en: "Blueberry/mango/strawberry mix cake.",
@@ -203,7 +203,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 15,
     category: "crepe",
-    image: "product/crepe/crepe1.jpg",
+    image: "product/crepe/crepe1.webp",
     name_en: "Mango Crepe Cake",
     name_zh: "芒果千层蛋糕",
     desc_en: "Fresh thinly layered mango crepe cake.",
@@ -216,7 +216,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 16,
     category: "tray",
-    image: "product/trayCake/trayCake1.jpg",
+    image: "product/trayCake/trayCake1.webp",
     name_en: "Mango Tray Cake",
     name_zh: "芒果盒装蛋糕",
     desc_en: "Layered mango tray cake.",
@@ -226,7 +226,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 17,
     category: "tray",
-    image: "product/trayCake/trayCake2.jpg",
+    image: "product/trayCake/trayCake2.webp",
     name_en: "Strawberry Tray Cake",
     name_zh: "草莓盒装蛋糕",
     desc_en: "Layered strawberry tray cake.",
@@ -237,7 +237,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 18,
     category: "cupcake",
-    image: "product/cupcake/cupcake1.jpg",
+    image: "product/cupcake/cupcake1.webp",
     name_en: "Vanilla Cupcakes",
     name_zh: "香草纸杯蛋糕",
     desc_en: "Vanilla cupcakes topped with oreos, grapes, and sprinkles.",
@@ -257,7 +257,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 20,
     category: "cupcake",
-    image: "product/cupcake/cupcake3.jpg",
+    image: "product/cupcake/cupcake3.webp",
     name_en: "Plain Vanilla Cupcakes",
     name_zh: "原味香草纸杯蛋糕",
     desc_en: "Vanilla cupcakes with no frosting.",
@@ -268,7 +268,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 21,
     category: "dimsum",
-    image: "product/other/wifeCake.jpg",
+    image: "product/other/wifeCake.webp",
     name_en: "Coconut / Salted Yolk Puffs",
     name_zh: "椰蓉 / 流沙酥",
     desc_en: "Flaky baked puffs with green bean paste filling. 12 pieces.",
@@ -279,7 +279,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 22,
     category: "mochi",
-    image: "product/mochi/mochi1.jpg",
+    image: "product/mochi/mochi1.webp",
     name_en: "Chinese Mochi Pancakes",
     name_zh: "中式麻糬饼",
     desc_en:
@@ -290,7 +290,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 23,
     category: "mochi",
-    image: "product/mochi/mochi2.jpg",
+    image: "product/mochi/mochi2.webp",
     name_en: "Creamy Strawberry/Durian Mochi",
     name_zh: "草莓 / 榴莲奶油麻糬",
     desc_en:
@@ -305,7 +305,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 24,
     category: "bread",
-    image: "product/bread/bread1.jpg",
+    image: "product/bread/bread1.webp",
     name_en: "Soft Bread",
     name_zh: "松软面包",
     desc_en: "Soft baked bread with a hint of salt.",
@@ -316,7 +316,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 25,
     category: "dimsum",
-    image: "product/bread/bread2.jpg",
+    image: "product/bread/bread2.webp",
     name_en: "Salted Runny Yolk Pineapple Buns",
     name_zh: "流沙菠萝包",
     desc_en: "Flaky pineapple buns with salted yolk. 30 pieces.",
@@ -327,7 +327,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 26,
     category: "dimsum",
-    image: "product/dimsum/dimsum1.jpg",
+    image: "product/dimsum/dimsum1.webp",
     name_en: "Shrimp Har Gao",
     name_zh: "虾饺",
     desc_en: "Har Gao wrapped with meat filling and shrimp.",
@@ -337,7 +337,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 27,
     category: "dimsum",
-    image: "product/dimsum/dimsum2.jpg",
+    image: "product/dimsum/dimsum2.webp",
     name_en: "Sui Mai",
     name_zh: "烧卖",
     desc_en: "Sui Mai with pork and shrimp meat filling.",
