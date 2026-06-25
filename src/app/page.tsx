@@ -150,44 +150,46 @@ const Home = () => {
         cartCount={cartItemCount}
         onCartClick={() => setIsCartOpen(true)}
       />
-      <Landing lang={lang} />
-      <MenuGrid lang={lang} onAdd={handleAdd} />
+      <div className="pt-16 sm:pt-20">
+        <Landing lang={lang} />
+        <MenuGrid lang={lang} onAdd={handleAdd} />
 
-      <CartDrawer
-        lang={lang}
-        open={isCartOpen}
-        cartItems={cartItems}
-        subtotal={subtotal}
-        pickupInfo={pickupInfo}
-        isCheckingOut={isCheckingOut}
-        checkoutError={checkoutError}
-        onItemQtyChange={handleItemQtyChange}
-        onRemoveItem={handleRemoveItem}
-        onPickupChange={handlePickupChange}
-        onCheckout={handleCheckout}
-        onClose={() => setIsCartOpen(false)}
-      />
+        <CartDrawer
+          lang={lang}
+          open={isCartOpen}
+          cartItems={cartItems}
+          subtotal={subtotal}
+          pickupInfo={pickupInfo}
+          isCheckingOut={isCheckingOut}
+          checkoutError={checkoutError}
+          onItemQtyChange={handleItemQtyChange}
+          onRemoveItem={handleRemoveItem}
+          onPickupChange={handlePickupChange}
+          onCheckout={handleCheckout}
+          onClose={() => setIsCartOpen(false)}
+        />
 
-      {success && (
-        <div className="mx-auto mb-8 max-w-6xl px-15">
-          <div className="rounded-3xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-700">
-            {lang === "en"
-              ? "Your order is confirmed! Please bring your pickup confirmation to the store."
-              : "订单已确认！请携带取货确认到店取货。"}
+        {success && (
+          <div className="mx-auto mb-8 max-w-6xl px-15">
+            <div className="rounded-3xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-700">
+              {lang === "en"
+                ? "Your order is confirmed! Please bring your pickup confirmation to the store."
+                : "订单已确认！请携带取货确认到店取货。"}
+            </div>
           </div>
-        </div>
-      )}
-      {canceled && (
-        <div className="mx-auto mb-8 max-w-6xl px-15">
-          <div className="rounded-3xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-700">
-            {lang === "en"
-              ? "Payment was canceled. You can update your cart and try again."
-              : "支付已取消。您可以修改购物车后重试。"}
+        )}
+        {canceled && (
+          <div className="mx-auto mb-8 max-w-6xl px-15">
+            <div className="rounded-3xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-700">
+              {lang === "en"
+                ? "Payment was canceled. You can update your cart and try again."
+                : "支付已取消。您可以修改购物车后重试。"}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 };
