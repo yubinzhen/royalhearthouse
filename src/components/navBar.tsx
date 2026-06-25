@@ -19,7 +19,7 @@ export default function NavBar({
   onCartClick,
 }: NavBarProps) {
   return (
-    <div className="z-50 flex h-16 items-center justify-between border-b border-gray-400 bg-white px-4 shadow-sm sm:h-20 sm:px-6">
+    <div className="fixed inset-x-0 top-0 z-50 flex h-16 w-full items-center justify-between border-b border-gray-400 bg-white px-4 shadow-sm sm:h-20 sm:px-6">
       <a href="/" className="flex items-center gap-2 sm:gap-3">
         <Image
           className="h-9 w-9 rounded-lg shadow-sm sm:h-11 sm:w-11 md:h-13 md:w-13"
