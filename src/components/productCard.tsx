@@ -46,14 +46,14 @@ export default function ProductCard({
   }
 
   return (
-    <div className="hover:border-blush relative flex flex-col overflow-hidden rounded-2xl border border-transparent bg-white shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+    <div className="hover:border-blush relative flex w-full flex-col overflow-hidden rounded-2xl border border-transparent bg-white shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
       {product.badge_en && (
         <div className="bg-royalheart-gold absolute top-2.5 right-2.5 z-10 rounded-full px-2.5 py-0.5 text-[0.65rem] font-black tracking-wide text-white shadow">
           {t(product.badge_en, product.badge_zh ?? "")}
         </div>
       )}
 
-      <div className="bg-royalheart-lightblush h-64 w-full">
+      <div className="bg-royalheart-lightblush h-40 w-full sm:h-56 md:h-64">
         <img
           src={product.image}
           alt={t(product.name_en, product.name_zh)}
@@ -61,23 +61,23 @@ export default function ProductCard({
         />
       </div>
 
-      <div className="flex flex-1 flex-col p-4">
-        <div className="text-text font-serif text-base">
+      <div className="flex flex-1 flex-col p-3 sm:p-4">
+        <div className="text-text font-serif text-sm sm:text-base">
           {t(product.name_en, product.name_zh)}
         </div>
-        <p className="text-text-light mb-2 text-[0.72rem]">
+        <p className="text-text-light mb-2 text-[0.68rem] sm:text-[0.72rem]">
           {t(product.name_zh, product.name_en)}
         </p>
-        <p className="mb-4 flex-1 text-[0.75rem] leading-relaxed text-gray-400">
+        <p className="mb-3 flex-1 text-[0.7rem] leading-relaxed text-gray-400 sm:mb-4 sm:text-[0.75rem]">
           {t(product.desc_en, product.desc_zh)}
         </p>
 
-        <div className="flex items-center justify-between gap-2">
+        <div className="mt-auto flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           {product.sizes.length > 1 ? (
             <select
               value={selectedSizeIdx}
               onChange={(e) => setSelectedSizeIdx(Number(e.target.value))}
-              className="bg-royalheart-cream text-royalheart-gold border-royalheart-blush text-text-mid focus:border-gold max-w-[130px] rounded-lg border px-2 py-1.5 text-[0.75rem] font-bold focus:outline-none"
+              className="bg-royalheart-cream text-royalheart-gold border-royalheart-blush text-text-mid focus:border-gold w-full rounded-lg border px-2 py-1.5 text-[0.75rem] font-bold focus:outline-none sm:max-w-[130px]"
             >
               {product.sizes.map((s, i) => (
                 <option key={s.id} value={i}>
@@ -93,7 +93,7 @@ export default function ProductCard({
 
           <button
             onClick={handleAdd}
-            className={`bg-royalheart-brown hover:bg-royalheart-lightgold flex items-center gap-1.5 rounded-full px-4 py-2 text-[0.8rem] font-bold text-white transition-all duration-150 active:scale-95 ${
+            className={`bg-royalheart-brown hover:bg-royalheart-lightgold flex items-center justify-center gap-1.5 rounded-full px-4 py-2 text-[0.8rem] font-bold text-white transition-all duration-150 active:scale-95 sm:justify-start ${
               popped ? "scale-110" : ""
             }`}
           >
