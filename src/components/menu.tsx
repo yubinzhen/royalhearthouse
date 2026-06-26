@@ -21,7 +21,10 @@ export default function MenuGrid({ lang, onAdd }: MenuGridProps) {
       : PRODUCTS.filter((p) => p.category === activeCategory);
 
   return (
-    <div id="menu" className="mx-auto mb-8 max-w-6xl px-15 py-12">
+    <div
+      id="menu"
+      className="mx-auto mb-8 max-w-6xl px-4 py-8 sm:px-6 sm:py-10 lg:px-15 lg:py-12"
+    >
       <div className="mb-6">
         <p className="text-royalheart-gold mb-1 text-xs font-black tracking-[0.2em] uppercase">
           {t("Our Menu", "我们的菜单")}
@@ -47,7 +50,7 @@ export default function MenuGrid({ lang, onAdd }: MenuGridProps) {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((product) => (
           <ProductCard
             key={product.id}
